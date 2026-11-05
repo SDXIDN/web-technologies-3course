@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+// Параметр times має значення за замовчуванням
+function greet(name, times = 1) {
+    return Array(times).fill(`Привіт, ${name}!`).join(" ");
+}
+// Функція, що нічого не повертає
+function printLine(text) {
+    console.log(`>>> ${text}`);
+}
+printLine(greet("Олена")); // times не передано -> 1
+printLine(greet("Андрій", 3)); // times = 3
+//# sourceMappingURL=functions.js.map
