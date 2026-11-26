@@ -1,0 +1,12 @@
+.tasks-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__note {
+    margin: 0;
+    font-size: 0.8125rem;
+    color: var(--color-muted);
+    text-align: center;
+  }
+}

@@ -1,0 +1,15 @@
+.header {
+  margin-bottom: 24px;
+  text-align: center;
+
+  &__title {
+    margin: 0;
+    font-size: 2rem;
+    color: var(--color-primary);
+  }
+
+  &__subtitle {
+    margin: 4px 0 0;
+    color: var(--color-muted);
+  }
+}

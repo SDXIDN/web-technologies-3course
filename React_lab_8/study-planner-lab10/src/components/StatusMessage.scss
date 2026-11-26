@@ -1,0 +1,39 @@
+.status-message {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  padding: 24px;
+  text-align: center;
+  background: var(--color-surface);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius);
+
+  &__text {
+    margin: 0;
+    color: var(--color-muted);
+  }
+
+  &--error {
+    background: #fef2f2;
+    border-color: #fecaca;
+
+    .status-message__text {
+      color: var(--color-danger);
+    }
+  }
+
+  &__action {
+    padding: 6px 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    background: var(--color-primary);
+    border: 0;
+    border-radius: 8px;
+
+    &:hover {
+      background: var(--color-primary-hover);
+    }
+  }
+}
