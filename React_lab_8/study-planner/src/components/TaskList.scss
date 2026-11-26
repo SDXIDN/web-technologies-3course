@@ -1,0 +1,21 @@
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  &__empty {
+    padding: 24px;
+    color: var(--color-muted);
+    text-align: center;
+    background: var(--color-surface);
+    border: 1px dashed var(--color-border);
+    border-radius: var(--radius);
+
+    p {
+      margin: 0;
+    }
+  }
+}

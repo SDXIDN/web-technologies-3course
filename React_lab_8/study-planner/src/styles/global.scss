@@ -1,0 +1,41 @@
+// Глобальні стилі — лише reset, шрифти та CSS-змінні.
+:root {
+  --color-bg: #f4f6fb;
+  --color-surface: #ffffff;
+  --color-text: #1f2430;
+  --color-muted: #6b7280;
+  --color-border: #e1e5ee;
+  --color-primary: #4f46e5;
+  --color-primary-hover: #4338ca;
+  --color-danger: #dc2626;
+  --color-success: #16a34a;
+  --color-medium: #f59e0b;
+  --radius: 10px;
+  --shadow: 0 1px 3px rgb(16 24 40 / 8%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+  line-height: 1.5;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
