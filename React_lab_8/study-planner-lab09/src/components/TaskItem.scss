@@ -1,0 +1,136 @@
+.task-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-medium);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+
+  @media (max-width: 520px) {
+    flex-direction: column;
+  }
+
+  &--completed {
+    background: #f0fdf4;
+    border-left-color: var(--color-success);
+
+    .task-item__title {
+      color: var(--color-muted);
+      text-decoration: line-through;
+    }
+
+    .task-item__description {
+      opacity: 0.6;
+    }
+  }
+
+  &--pending {
+    background: #f3f4f6;
+    border-left-color: var(--color-muted);
+    opacity: 0.6;
+
+    .task-item__title {
+      font-style: italic;
+    }
+  }
+
+  &__body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 1.0625rem;
+  }
+
+  &__description {
+    margin: 4px 0 0;
+    color: var(--color-muted);
+  }
+
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  &__tag {
+    padding: 2px 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    background: #eef2ff;
+    border-radius: 999px;
+
+    &--low {
+      color: #075985;
+      background: #e0f2fe;
+    }
+
+    &--medium {
+      color: #92400e;
+      background: #fef3c7;
+    }
+
+    &--high {
+      color: #991b1b;
+      background: #fee2e2;
+    }
+  }
+
+  &__status {
+    font-size: 0.75rem;
+    color: var(--color-muted);
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__button {
+    padding: 6px 12px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+
+    &:hover {
+      background: var(--color-bg);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+
+    &--edit {
+      color: var(--color-primary);
+      border-color: var(--color-primary);
+    }
+
+    &--toggle {
+      color: var(--color-success);
+      border-color: var(--color-success);
+    }
+
+    &--delete {
+      color: var(--color-danger);
+      border-color: var(--color-danger);
+    }
+  }
+}
